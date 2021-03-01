@@ -1,0 +1,8 @@
+{
+  "student_id": "",
+  "password": "",
+  "type": 0,
+  "_type_describe": "0 - Campus network; 1 - China Mobile",
+  "index": 0,
+  "_index_describe": "The index of your IP in the list after the output 'Get IP address' (starting from 0)"
+}
