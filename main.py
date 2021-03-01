@@ -41,7 +41,7 @@ if sys.platform.startswith('linux') and os.system('ifconfig'):
 
 
 def ping(address):
-    return not os.system('ping -n 3 ' if sys.platform.startswith('win32') else 'ping -c3 ' + address)
+    return not os.system(('ping -n 3 ' if sys.platform.startswith('win32') else 'ping -c3 ') + address)
 
 
 def ipconfig() -> str:
