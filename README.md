@@ -22,10 +22,15 @@ sudo yum install net-tools      # CentOS (Red Hat)
 {
   "student_id": "填写网关账号",
   "password": "填写网关密码",
-  "type": 0 | 1,  // 0 - 校园网；1 - 中国移动
-  "index": 0  // 你的 IP 在“获得的IP地址”列表中的下标索引，默认为0可以满足大多数场景
+  "type": 0,
+  "index": 0
 }
 ~~~
+
+- type: 0 - 校园网；1 - 中国移动
+- index: 你的 IP 在“获得的IP地址”列表中的下标索引，默认为0可以满足大多数场景
+
+
 
 #### 开始运行
 
