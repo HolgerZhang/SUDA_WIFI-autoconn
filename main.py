@@ -41,7 +41,9 @@ if sys.platform.startswith('linux') and os.system('ifconfig'):
 
 
 def ping(address):
-    return not os.system(('ping -n 3 ' if sys.platform.startswith('win32') else 'ping -c3 ') + address)
+    if os.system(('ping -n 1 ' if sys.platform.startswith('win32') else 'ping -c1 ') + address) != 0:
+        return not os.system(('ping -n 3 ' if sys.platform.startswith('win32') else 'ping -c3 ') + address)
+    return True
 
 
 def ipconfig() -> str:
@@ -53,6 +55,7 @@ def main_loop():
     while 1:
         if ping('www.baidu.com'):
             print('Successful Internet connection.\n')
+            retry_times = 0
             sleep(10)
             continue
         if not ping('a.suda.edu.cn'):
