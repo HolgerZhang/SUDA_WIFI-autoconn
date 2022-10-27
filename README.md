@@ -4,8 +4,8 @@ SUDA_WIFI 网关自动登录程序
 
 #### 环境要求
 
-- Windows | Linux 操作系统
-- Python 3，装有 requests （若不存在，装有 pip 时会自动下载）
+- Windows | Linux | macOS 操作系统
+- Python 3，装有 requests
 - Linux 系统装有 net-tools 
 
 ~~~shell
