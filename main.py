@@ -68,7 +68,7 @@ def check_wlan_ssid(ssid_prefix: str) -> bool:
         return ssid.startswith(ssid_prefix)
     if sys.platform.startswith('win32'):
         wifi_info = os.popen('netsh wlan show interfaces').read()
-        ssid_match = re.search(r'\s*SSID: (.+)\s*', wifi_info).group(1)
+        ssid_match = re.search(r'\s*SSID\s*: (.+)\s*', wifi_info)
         if not ssid_match or len(ssid_match.groups()) < 1:
             return False
         ssid = ssid_match.group(1)
